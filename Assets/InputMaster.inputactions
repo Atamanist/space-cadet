@@ -1,0 +1,71 @@
+{
+    "name": "InputMaster",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "512dcec4-e58e-4d3a-8604-ca3cd702d3c5",
+            "actions": [
+                {
+                    "name": "PullPlunger",
+                    "type": "Button",
+                    "id": "90f54d0b-d9fc-43a2-ad30-4e0340e8d80d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "RightFlipper",
+                    "type": "Button",
+                    "id": "6ae2bac5-186c-44b4-895d-c764f841d15f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "LeftFlipper",
+                    "type": "Button",
+                    "id": "2acbdfe0-8472-491f-8563-f0d9508216da",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0aebd139-4277-49f2-a15b-9108bf8a5f6d",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PullPlunger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b5a2c439-9824-41cb-9110-109ce5b443b6",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightFlipper",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f06d00d7-32ee-4123-b6cb-7f5df5f61b08",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftFlipper",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
