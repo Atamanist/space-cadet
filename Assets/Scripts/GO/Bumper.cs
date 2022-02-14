@@ -8,7 +8,6 @@ public class Bumper : MonoBehaviour, IPushable, ISwitchable,IReturnable
     [SerializeField] private Rigidbody _rbBase;
     [SerializeField] private float _rbPullHeight;
     [SerializeField] private float _rbPushHeight;
-    [SerializeField] private Detector _detector;
     private Vector3 _startPositions;
 
     private bool _isOn;

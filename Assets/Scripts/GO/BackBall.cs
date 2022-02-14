@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class BackBall : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        collision.gameObject.transform.localPosition = Vector3.zero;
+        if (other.gameObject.TryGetComponent<IDetectable>(out IDetectable component)&& other.gameObject.TryGetComponent<Rigidbody>(out Rigidbody rb))
+        {
+            rb.velocity = Vector3.zero;
+            other.gameObject.transform.localPosition = Vector3.zero;
+
+        }
     }
 }

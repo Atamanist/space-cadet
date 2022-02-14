@@ -24,15 +24,26 @@ public class Detector : MonoBehaviour, ISender<bool>
             switcher.Switch(value);
     }
 
-    private void OnCollisionEnter(Collision collision) => DetectIDetected(collision);
+    private void OnCollisionEnter(Collision collision) => DetectIDetectedOn(collision);
 
-    private void OnCollisionStay(Collision collision) => DetectIDetected(collision);
+    private void OnCollisionStay(Collision collision) => DetectIDetectedOn(collision);
 
-    private void DetectIDetected(Collision collision)
+    //private void OnCollisionExit(Collision collision)=>DetectIDetectedOff(collision);
+
+    private void DetectIDetectedOn(Collision collision)
     {
         if (collision.gameObject.TryGetComponent<IDetectable>(out IDetectable component))
         {
             Send(true);
         }
     }
+
+    private void DetectIDetectedOff(Collision collision)
+    {
+        if (collision.gameObject.TryGetComponent<IDetectable>(out IDetectable component))
+        {
+            Send(false);
+        }
+    }
+
 }

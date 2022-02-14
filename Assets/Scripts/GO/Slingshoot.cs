@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Slingshoot : MonoBehaviour, IPushable, IReturnable, ISwitchable
+public class Slingshoot : MonoBehaviour, IPushable, IReturnable, ISwitchable, IWaitAndDo
 {
     [SerializeField] private Flipper[] _flipers;
     [SerializeField] private float _timer;
@@ -21,16 +21,17 @@ public class Slingshoot : MonoBehaviour, IPushable, IReturnable, ISwitchable
         }
     }
 
-    IEnumerator WaitAndDo(float time)
-    {
-        yield return new WaitForSeconds(time);
-        Return();
-    }
     public void Return()
     {
         foreach (Flipper detector in _flipers)
         {
             detector.Switch(false);
         }
+    }
+
+    public IEnumerator WaitAndDo(float time)
+    {
+        yield return new WaitForSeconds(time);
+        Return();
     }
 }
